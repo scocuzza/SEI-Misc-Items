@@ -1,0 +1,19 @@
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export PATH="/Users/stephencocuzza/.local/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+export PATH="/usr/local/opt/mongodb-community@4.2/bin:$PATH"
+# Setting PATH for Python 3.9
+# The original version is saved in .bash_profile.pysave
+export PATH="/Library/Frameworks/Python.framework/Versions/3.9/bin:${PATH}"
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+source /usr/local/etc/bash_completion.d/git-completion.bash
+eval "$(starship init bash)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
